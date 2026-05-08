@@ -5,6 +5,14 @@
 
 ---
 
+## 🎥 Video Tutorial
+
+Installation and setup guide:
+
+- Telegram — [Уголочек программиста](YOUR_TELEGRAM_POST_LINK)
+
+---
+
 ### ✨ Основные возможности
 
 * Многопроходный URP рендеринг (Shadow / Light / Mask / Composite)

@@ -1,0 +1,10 @@
+{
+  "name": "com.BEISER901.liteglow2d",
+  "version": "1.0.0",
+  "displayName": "LiteGlowUnity2D",
+  "description": "Lightweight 2D glow system for Unity URP.",
+  "unity": "2022.3",
+  "author": {
+    "name": "BEISER901_nikita_bondar"
+  }
+}
