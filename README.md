@@ -261,9 +261,12 @@ public static List<LiteGlow2D> Instances = new();
 #### typeRender
 
 Определяет режим получения `SpriteRenderer` для рендера свечения.
+    Sprite = 0,
+    Current = 1,
+    ChildGroup = 2
 
 ```csharp
-public TypeRender typeRender;
+public LiteGlow2D.TypeRender typeRender;
 ```
 
 ---
@@ -320,11 +323,14 @@ public Color color = Color.white;
 
 #### mode
 
-Режим обработки свечения.
+Режим обработки свечения. 
+    PlainAlpha = 0,
+    SmoothCenter = 1,
+    Mask = 2
 
 ```csharp
 [SerializeField]
-public ModeType mode;
+public LiteGlow2D.ModeType mode;
 ```
 
 ---
@@ -401,6 +407,34 @@ public Bounds GetBounds()
 
 ```csharp
 private void OnValidate()
+```
+
+### Enum
+
+#### TypeRender
+
+Определяет режим получения `SpriteRenderer` для рендера свечения.
+
+```csharp
+public enum TypeRender
+{
+    Sprite = 0,
+    Current = 1,
+    ChildGroup = 2
+}
+```
+
+#### ModeType
+
+Режим обработки свечения.
+
+```csharp
+public enum ModeType
+{
+    PlainAlpha = 0,
+    SmoothCenter = 1,
+    Mask = 2
+}
 ```
 
 ---
