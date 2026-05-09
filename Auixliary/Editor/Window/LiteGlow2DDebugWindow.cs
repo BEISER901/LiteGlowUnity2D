@@ -71,8 +71,6 @@ namespace com.BEISER901.liteglow2d {
                     SerializedProperty color = so.FindProperty("color");
                     SerializedProperty useTexture = so.FindProperty("useTexture");
                     SerializedProperty sprite = so.FindProperty("_spriteForRender");
-                    SerializedProperty glowRadius = so.FindProperty("glowRadius");
-                    SerializedProperty glowSharpness = so.FindProperty("glowSharpness");
 
                     EditorGUILayout.BeginVertical("box");
 
@@ -93,11 +91,6 @@ namespace com.BEISER901.liteglow2d {
 
                     EditorGUILayout.Space(5);
                     EditorGUILayout.LabelField("Effects", EditorStyles.boldLabel);
-
-                    EditorGUI.BeginDisabledGroup((LiteGlow2D.ModeType)mode.enumValueIndex != LiteGlow2D.ModeType.PlainAlpha);
-                    EditorGUILayout.PropertyField(glowRadius);
-                    EditorGUILayout.PropertyField(glowSharpness);
-                    EditorGUI.EndDisabledGroup();
 
                     EditorGUILayout.Space(5);
                     EditorGUILayout.LabelField("Appearance", EditorStyles.boldLabel);

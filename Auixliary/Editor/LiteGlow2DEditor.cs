@@ -16,8 +16,6 @@ namespace com.BEISER901.liteglow2d {
             SerializedProperty color = serializedObject.FindProperty("color");
             SerializedProperty useTexture = serializedObject.FindProperty("useTexture");
             SerializedProperty _spriteForRender = serializedObject.FindProperty("_spriteForRender");
-            SerializedProperty glowRadius = serializedObject.FindProperty("glowRadius");
-            SerializedProperty glowSharpness = serializedObject.FindProperty("glowSharpness");
 
             serializedObject.Update();
 
@@ -35,17 +33,6 @@ namespace com.BEISER901.liteglow2d {
             EditorGUILayout.PropertyField(size);
             EditorGUILayout.PropertyField(offset);
             EditorGUILayout.PropertyField(angle);
-            if((LiteGlow2D.ModeType) mode.enumValueIndex != LiteGlow2D.ModeType.Mask) {        
-                EditorGUILayout.Space(5);
-
-                EditorGUILayout.LabelField("Effects", EditorStyles.boldLabel);
-                EditorGUI.BeginDisabledGroup(
-                    mode.enumValueIndex != 2
-                );
-                EditorGUILayout.PropertyField(glowRadius);
-                EditorGUILayout.PropertyField(glowSharpness);
-                EditorGUI.EndDisabledGroup();
-            }
             EditorGUILayout.Space(5);
 
             EditorGUILayout.LabelField("Appearance", EditorStyles.boldLabel);
@@ -72,8 +59,8 @@ namespace com.BEISER901.liteglow2d {
             var t = (LiteGlow2D)target;
             EditorGUILayout.HelpBox(
                 $"Instances: {LiteGlow2D.Instances.Count}\n" +
-                $"Mode: {t.Mode}\n" +
-                $"Use Texture: {t.UseTexture}",
+                $"Mode: {t.mode}\n" +
+                $"Use Texture: {t.useTexture}",
                 MessageType.Info
             );
         }

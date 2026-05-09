@@ -70,7 +70,7 @@ namespace com.BEISER901.liteglow2d {
 
                 foreach (var light in LiteGlow2D.Instances)
                 {
-                    if((LiteGlow2D.ModeType) light.Mode == LiteGlow2D.ModeType.Mask) {
+                    if((LiteGlow2D.ModeType) light.mode == LiteGlow2D.ModeType.Mask) {
                         MaskBuffer.Add(light);
                         continue;
                     }
@@ -324,16 +324,13 @@ namespace com.BEISER901.liteglow2d {
 
             propBlock.SetFloat("_Intensity", light.intensity);
             LiteGlow2D.ModeType mode =
-                (LiteGlow2D.ModeType)light.Mode == LiteGlow2D.ModeType.Mask
+                (LiteGlow2D.ModeType)light.mode == LiteGlow2D.ModeType.Mask
                     ? LiteGlow2D.ModeType.PlainAlpha
-                    : (LiteGlow2D.ModeType)light.Mode;
+                    : (LiteGlow2D.ModeType)light.mode;
 
             propBlock.SetFloat("_Mode", (float)mode);
-            propBlock.SetFloat("_UseTexture", light.UseTexture ? 1f : 0f);
-            propBlock.SetFloat("_GlowRadius", light.GlowRadius);
-            propBlock.SetFloat("_GlowSharpness", light.GlowSharpness);
-            propBlock.SetColor("_Color", (LiteGlow2D.ModeType) light.Mode == LiteGlow2D.ModeType.Mask ? Color.white : light.color);
-            propBlock.SetFloat("_AlphaCutoff", light.AlphaCutoff);
+            propBlock.SetFloat("_UseTexture", light.useTexture ? 1f : 0f);
+            propBlock.SetColor("_Color", (LiteGlow2D.ModeType) light.mode == LiteGlow2D.ModeType.Mask ? Color.white : light.color);
 
             if (light.typeRender == LiteGlow2D.TypeRender.Sprite)
             {
