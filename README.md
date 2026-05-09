@@ -9,7 +9,7 @@
 
 Installation and setup guide:
 
-- Telegram — [Уголочек программиста](YOUR_TELEGRAM_POST_LINK)
+- Telegram — [Уголочек программиста](https://t.me/ugolokprogramistadayemayo/9)
 
 ---
 
